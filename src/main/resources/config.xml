@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.example.entity.Cricket" name="player">
+
+        <property name="runs">
+            <list>
+                <value>20</value>
+                <value>21</value>
+                <value>22</value>
+                <value>23</value>
+            </list>
+
+
+        </property>
+        <property name="wickets">
+            <list>
+                <value>3</value>
+                <value>4</value>
+                <value>5</value>
+                <value>6</value>
+            </list>
+
+        </property>
+        <property name="ground">
+            <map>
+                <entry key="bangalore" value="Chinnaswamy Stadium, Bangalore"/>
+                <entry key="Australia" value="MCG Stadium,, Australia" />
+                <entry key="Mumbai" value="Wankhede Stadium, Mumbai" />
+                <entry key="Lords" value="Lords Stadium, England"/>
+            </map>
+
+
+
+
+        </property>
+
+    </bean>
+
+    <bean name="player1" class="org.example.entity.Cricket">
+        <property name="runs">
+            <value>34</value>
+        </property>
+        <property name="wickets">
+            <value>2</value>
+        </property>
+        <property name="ground">
+            <value>MCG Australia</value>
+        </property>
+    </bean>
+
+
+</beans>
