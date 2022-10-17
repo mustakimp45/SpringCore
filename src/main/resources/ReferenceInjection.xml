@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="org.example.ReferenceInjection.Players" name="playersRef">
+        <property name="number">
+            <value>45</value>
+        </property>
+        <property name="Name">
+            <value>Mustakim</value>
+        </property>
+        <property name="strikeRate">
+            <value>171.68</value>
+        </property>
+
+    </bean>
+    <bean class="org.example.ReferenceInjection.Match" name="match">
+        <property name="runs">
+            <value>
+                78
+            </value>
+
+        </property>
+        <property name="team">
+            <value>
+                India
+            </value>
+
+        </property>
+        <property name="players">
+            <ref bean="playersRef"/>
+
+        </property>
+
+    </bean>
+
+    <bean id="a1" class="org.example.ConstructorInjection.Department">
+        <constructor-arg value="121" type="int"></constructor-arg>
+        <constructor-arg value="EIS"></constructor-arg>
+
+    </bean>
+
+    <bean id="a2" class="org.example.ConstructorInjection.Employee">
+        <constructor-arg value="1234" type="int"></constructor-arg>
+        <constructor-arg value="Mustakim Pendari"></constructor-arg>
+        <constructor-arg>
+            <ref bean="a1"/>
+        </constructor-arg>
+    </bean>
+
+
+</beans>

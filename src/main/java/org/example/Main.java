@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
-        ApplicationContext context=new ClassPathXmlApplicationContext("config.xml");
+        ApplicationContext context=new ClassPathXmlApplicationContext("org/example/ReferenceInjection/config.xml");
         Cricket cricket=(Cricket)context.getBean("player");
         System.out.println(cricket.getRuns());
         System.out.println(cricket.getWickets());
