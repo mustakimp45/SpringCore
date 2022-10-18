@@ -52,6 +52,15 @@
             <ref bean="a1"/>
         </constructor-arg>
     </bean>
+    <bean id="o" class="org.example.AutowiringExamples.Oxygen"></bean>
+<!--&lt;!&ndash;    <bean id="o2" class="org.example.AutowiringExamples.Oxygen"></bean>&ndash;&gt;-->
+<!--    <bean id="h" class="org.example.AutowiringExamples.HumanBeing" autowire="byType"></bean>-->
+
+<!--    <bean id="b1" class="org.example.LifeCycleOfBean.ByImplemeting.Bottle"></bean>-->
+
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>
+
+    <bean class="org.example.LifeCycleOfBean.ByAnnotation.Book"></bean>
 
 
 </beans>
